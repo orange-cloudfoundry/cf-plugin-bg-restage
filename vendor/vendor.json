@@ -1,0 +1,162 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "/r8pftVJrTfr6L1z2Hr8zTT4UWk=",
+			"path": "code.cloudfoundry.org/cli/cf",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "LxIafsVpgGykbYLzabSSqF4ki+M=",
+			"path": "code.cloudfoundry.org/cli/cf/configuration",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "bhBXKMtDOTPEM3VYvH93NFvrFpU=",
+			"path": "code.cloudfoundry.org/cli/cf/configuration/coreconfig",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "6L/4fhHPk91tyMAxTmNdV4napuc=",
+			"path": "code.cloudfoundry.org/cli/cf/formatters",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "JZZr9JME68/ugi8qD2ERZf5BRcs=",
+			"path": "code.cloudfoundry.org/cli/cf/i18n",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "YlZagVSimu+JeAjjbSQ1LnZIv0A=",
+			"path": "code.cloudfoundry.org/cli/cf/models",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "Yr+mHzKh8vwg3S0kgZ/p8Ip4t44=",
+			"path": "code.cloudfoundry.org/cli/cf/resources",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "OL0m093ETXkuDULvfK6V5qmaAYo=",
+			"path": "code.cloudfoundry.org/cli/cf/terminal",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "Fh0UVbrY55jTzwsCKPuoEZgxxlg=",
+			"path": "code.cloudfoundry.org/cli/cf/trace",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "ZZd6TCV9PVv2CCua0GYTG2jLUiI=",
+			"path": "code.cloudfoundry.org/cli/plugin",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "ZqrzOExwuoQXiVsSg6mMQQEXOd0=",
+			"path": "code.cloudfoundry.org/cli/plugin/models",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "FMaw8oAYnjghR/qfYWCwq26Auvs=",
+			"path": "code.cloudfoundry.org/cli/version",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "NC+KbpkiMhiaFl8wnQXKSooZ7H0=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/blang/semver",
+			"path": "github.com/blang/semver",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "oJcPM1lGDr9+u9fJ0jw5mxxsnJA=",
+			"path": "github.com/contraband/autopilot/rewind",
+			"revision": "f602d9cbf609b5c99bee0caba452f7eb2bbf58ab",
+			"revisionTime": "2016-08-31T21:23:50Z"
+		},
+		{
+			"checksumSHA1": "L8gzVN3b5zB7TkeimHrqqar4HsE=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/fatih/color",
+			"path": "github.com/fatih/color",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "MrqRXuqj5suGXqcRUUwi+YA7PmE=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/mattn/go-colorable",
+			"path": "github.com/mattn/go-colorable",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "uACx67qkmXALPy3f8TzUSS8mTPQ=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/mattn/go-isatty",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "yr1io0ChTlyR3qsSw/iSpn7TGJA=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/nicksnyder/go-i18n/i18n",
+			"path": "github.com/nicksnyder/go-i18n/i18n",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "UW57eu+Se/KHPD+SoNJLIERYHZQ=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/nicksnyder/go-i18n/i18n/bundle",
+			"path": "github.com/nicksnyder/go-i18n/i18n/bundle",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "+XOg99I1zdmBRUb04ZswvzQ2WS0=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/nicksnyder/go-i18n/i18n/language",
+			"path": "github.com/nicksnyder/go-i18n/i18n/language",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "nhlpSPeAP6jMGAuLPM2xflAZTlo=",
+			"origin": "code.cloudfoundry.org/cli/vendor/github.com/nicksnyder/go-i18n/i18n/translation",
+			"path": "github.com/nicksnyder/go-i18n/i18n/translation",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "xiderUuvye8Kpn7yX3niiJg32bE=",
+			"origin": "code.cloudfoundry.org/cli/vendor/golang.org/x/crypto/ssh/terminal",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "mAD+upBUV5C/GxDHBhhSS7y4u5A=",
+			"origin": "code.cloudfoundry.org/cli/vendor/golang.org/x/sys/unix",
+			"path": "golang.org/x/sys/unix",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		},
+		{
+			"checksumSHA1": "emnLVqPYh6AxNUSH3BMpOM/I7XQ=",
+			"origin": "code.cloudfoundry.org/cli/vendor/gopkg.in/yaml.v2",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "9c9a261fd05f1df71efad745e042b88d0773fe6e",
+			"revisionTime": "2017-04-06T23:07:22Z"
+		}
+	],
+	"rootPath": "github.com/orange-cloudfoundry/cf-plugin-bg-restage"
+}

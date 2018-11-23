@@ -1,7 +1,7 @@
 language: go
 sudo: true
 go:
-- 1.8
+- "1.10"
 script:
 - echo "notest"
 after_success:
@@ -23,6 +23,7 @@ deploy:
   - out/cf-plugin-bg-restage_windows_386.exe
   - out/cf-plugin-bg-restage_windows_amd64.exe
   - repo-index.yml
+  skip_cleanup: true
   on:
     repo: orange-cloudfoundry/cf-plugin-bg-restage
     tags: true

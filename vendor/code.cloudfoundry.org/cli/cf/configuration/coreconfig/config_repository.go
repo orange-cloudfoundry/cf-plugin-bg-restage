@@ -1,6 +1,7 @@
 package coreconfig
 
 import (
+	"strings"
 	"sync"
 
 	"code.cloudfoundry.org/cli/cf/configuration"
@@ -22,6 +23,7 @@ type CCInfo struct {
 	APIVersion               string `json:"api_version"`
 	AuthorizationEndpoint    string `json:"authorization_endpoint"`
 	DopplerEndpoint          string `json:"doppler_logging_endpoint"`
+	LogCacheEndpoint         string `json:"log_cache_endpoint"`
 	MinCLIVersion            string `json:"min_cli_version"`
 	MinRecommendedCLIVersion string `json:"min_recommended_cli_version"`
 	SSHOAuthClient           string `json:"app_ssh_oauth_client"`
@@ -61,6 +63,7 @@ type Reader interface {
 
 	AuthenticationEndpoint() string
 	DopplerEndpoint() string
+	LogCacheEndpoint() string
 	UaaEndpoint() string
 	RoutingAPIEndpoint() string
 	AccessToken() string
@@ -101,29 +104,32 @@ type Reader interface {
 type ReadWriter interface {
 	Reader
 	ClearSession()
+	SetAccessToken(string)
 	SetAPIEndpoint(string)
 	SetAPIVersion(string)
+	SetAsyncTimeout(uint)
+	SetAuthenticationEndpoint(string)
+	SetCLIVersion(string)
+	SetColorEnabled(string)
+	SetDopplerEndpoint(string)
+	SetLogCacheEndpoint(string)
+	SetLocale(string)
 	SetMinCLIVersion(string)
 	SetMinRecommendedCLIVersion(string)
-	SetAuthenticationEndpoint(string)
-	SetDopplerEndpoint(string)
-	SetUaaEndpoint(string)
+	SetOrganizationFields(models.OrganizationFields)
+	SetPluginRepo(models.PluginRepo)
+	SetRefreshToken(string)
 	SetRoutingAPIEndpoint(string)
-	SetAccessToken(string)
+	SetSpaceFields(models.SpaceFields)
+	SetSSHOAuthClient(string)
+	SetSSLDisabled(bool)
+	SetTrace(string)
+	SetUaaEndpoint(string)
+	SetUAAGrantType(string)
 	SetUAAOAuthClient(string)
 	SetUAAOAuthClientSecret(string)
-	SetSSHOAuthClient(string)
-	SetRefreshToken(string)
-	SetOrganizationFields(models.OrganizationFields)
-	SetSpaceFields(models.SpaceFields)
-	SetSSLDisabled(bool)
-	SetAsyncTimeout(uint)
-	SetTrace(string)
-	SetColorEnabled(string)
-	SetLocale(string)
-	SetPluginRepo(models.PluginRepo)
+	UAAGrantType() string
 	UnSetPluginRepo(int)
-	SetCLIVersion(string)
 }
 
 //go:generate counterfeiter . Repository
@@ -197,6 +203,14 @@ func (c *ConfigRepository) DopplerEndpoint() (dopplerEndpoint string) {
 	return
 }
 
+func (c *ConfigRepository) LogCacheEndpoint() (logCacheEndpoint string) {
+	c.read(func() {
+		logCacheEndpoint = c.data.LogCacheEndPoint
+	})
+
+	return
+}
+
 func (c *ConfigRepository) UaaEndpoint() (uaaEndpoint string) {
 	c.read(func() {
 		uaaEndpoint = c.data.UaaEndpoint
@@ -211,11 +225,14 @@ func (c *ConfigRepository) RoutingAPIEndpoint() (routingAPIEndpoint string) {
 	return
 }
 
-func (c *ConfigRepository) APIEndpoint() (apiEndpoint string) {
+func (c *ConfigRepository) APIEndpoint() string {
+	var apiEndpoint string
 	c.read(func() {
 		apiEndpoint = c.data.Target
 	})
-	return
+	apiEndpoint = strings.TrimRight(apiEndpoint, "/")
+
+	return apiEndpoint
 }
 
 func (c *ConfigRepository) HasAPIEndpoint() (hasEndpoint bool) {
@@ -290,7 +307,12 @@ func (c *ConfigRepository) UserGUID() (guid string) {
 
 func (c *ConfigRepository) Username() (name string) {
 	c.read(func() {
-		name = NewTokenInfo(c.data.AccessToken).Username
+		t := NewTokenInfo(c.data.AccessToken)
+		if t.Username != "" {
+			name = t.Username
+		} else {
+			name = t.ClientID
+		}
 	})
 	return
 }
@@ -468,6 +490,12 @@ func (c *ConfigRepository) SetDopplerEndpoint(endpoint string) {
 	})
 }
 
+func (c *ConfigRepository) SetLogCacheEndpoint(endpoint string) {
+	c.write(func() {
+		c.data.LogCacheEndPoint = endpoint
+	})
+}
+
 func (c *ConfigRepository) SetUaaEndpoint(uaaEndpoint string) {
 	c.write(func() {
 		c.data.UaaEndpoint = uaaEndpoint
@@ -561,5 +589,19 @@ func (c *ConfigRepository) SetPluginRepo(repo models.PluginRepo) {
 func (c *ConfigRepository) UnSetPluginRepo(index int) {
 	c.write(func() {
 		c.data.PluginRepos = append(c.data.PluginRepos[:index], c.data.PluginRepos[index+1:]...)
+	})
+}
+
+func (c *ConfigRepository) UAAGrantType() string {
+	grantType := ""
+	c.read(func() {
+		grantType = c.data.UAAGrantType
+	})
+	return grantType
+}
+
+func (c *ConfigRepository) SetUAAGrantType(grantType string) {
+	c.write(func() {
+		c.data.UAAGrantType = grantType
 	})
 }

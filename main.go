@@ -4,9 +4,16 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strconv"
 
 	"code.cloudfoundry.org/cli/plugin"
 	"github.com/contraband/autopilot/rewind"
+)
+
+var (
+	Major string
+	Minor string
+	Patch string
 )
 
 type BgRestagePlugin struct{}
@@ -79,12 +86,19 @@ func (BgRestagePlugin) run(cliConnection plugin.CliConnection, args []string) er
 }
 
 func (BgRestagePlugin) GetMetadata() plugin.PluginMetadata {
+	major := 0
+	minor := 0
+	patch := 0
+	major, _ = strconv.Atoi(Major)
+	minor, _ = strconv.Atoi(Minor)
+	patch, _ = strconv.Atoi(Patch)
+
 	return plugin.PluginMetadata{
 		Name: "bg-restage",
 		Version: plugin.VersionType{
-			Major: 1,
-			Minor: 1,
-			Build: 0,
+			Major: major,
+			Minor: minor,
+			Build: patch,
 		},
 		Commands: []plugin.Command{
 			{

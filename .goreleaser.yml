@@ -1,4 +1,4 @@
-project_name: bosh-bootloader
+project_name: cf-plugin-bg-restage
 
 builds:
   -

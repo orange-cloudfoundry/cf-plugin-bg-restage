@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 
 	"code.cloudfoundry.org/cli/cf/models"
+	"code.cloudfoundry.org/cli/util/configv3"
 )
 
 type AuthPromptType string
@@ -19,28 +20,30 @@ type AuthPrompt struct {
 }
 
 type Data struct {
-	ConfigVersion            int
-	Target                   string
-	APIVersion               string
-	AuthorizationEndpoint    string
-	DopplerEndPoint          string
-	UaaEndpoint              string
-	RoutingAPIEndpoint       string
 	AccessToken              string
-	UAAOAuthClient           string
-	UAAOAuthClientSecret     string
-	SSHOAuthClient           string
-	RefreshToken             string
-	OrganizationFields       models.OrganizationFields
-	SpaceFields              models.SpaceFields
-	SSLDisabled              bool
+	APIVersion               string
 	AsyncTimeout             uint
-	Trace                    string
+	AuthorizationEndpoint    string
 	ColorEnabled             string
+	ConfigVersion            int
+	DopplerEndPoint          string
 	Locale                   string
-	PluginRepos              []models.PluginRepo
+	LogCacheEndPoint         string
 	MinCLIVersion            string
 	MinRecommendedCLIVersion string
+	OrganizationFields       models.OrganizationFields
+	PluginRepos              []models.PluginRepo
+	RefreshToken             string
+	RoutingAPIEndpoint       string
+	SpaceFields              models.SpaceFields
+	SSHOAuthClient           string
+	SSLDisabled              bool
+	Target                   string
+	Trace                    string
+	UaaEndpoint              string
+	UAAGrantType             string
+	UAAOAuthClient           string
+	UAAOAuthClientSecret     string
 }
 
 func NewData() *Data {
@@ -53,7 +56,7 @@ func NewData() *Data {
 }
 
 func (d *Data) JSONMarshalV3() ([]byte, error) {
-	d.ConfigVersion = 3
+	d.ConfigVersion = configv3.CurrentConfigVersion
 	return json.MarshalIndent(d, "", "  ")
 }
 
@@ -63,7 +66,7 @@ func (d *Data) JSONUnmarshalV3(input []byte) error {
 		return err
 	}
 
-	if d.ConfigVersion != 3 {
+	if d.ConfigVersion != configv3.CurrentConfigVersion {
 		*d = Data{}
 		return nil
 	}

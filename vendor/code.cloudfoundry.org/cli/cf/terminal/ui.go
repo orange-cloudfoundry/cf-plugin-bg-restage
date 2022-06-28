@@ -19,7 +19,8 @@ import (
 type ColoringFunction func(value string, row int, col int) string
 
 func NotLoggedInText() string {
-	return fmt.Sprintf(T("Not logged in. Use '{{.CFLoginCommand}}' to log in.", map[string]interface{}{"CFLoginCommand": CommandColor(cf.Name + " " + "login")}))
+	return fmt.Sprintf(T("Not logged in. Use '{{.CFLoginCommand}}' or '{{.CFLoginCommandSSO}}' to log in.", map[string]interface{}{"CFLoginCommand": CommandColor(cf.Name + " " + "login"),
+		"CFLoginCommandSSO": CommandColor(cf.Name + " " + "login --sso")}))
 }
 
 //go:generate counterfeiter . UI
@@ -56,6 +57,7 @@ type terminalUI struct {
 	stdout  io.Writer
 	printer Printer
 	logger  trace.Printer
+	scanner *bufio.Scanner
 }
 
 func NewUI(r io.Reader, w io.Writer, printer Printer, logger trace.Printer) UI {
@@ -64,6 +66,7 @@ func NewUI(r io.Reader, w io.Writer, printer Printer, logger trace.Printer) UI {
 		stdout:  w,
 		printer: printer,
 		logger:  logger,
+		scanner: bufio.NewScanner(r),
 	}
 }
 
@@ -106,11 +109,9 @@ func (ui *terminalUI) Warn(message string, args ...interface{}) {
 
 func (ui *terminalUI) Ask(prompt string) string {
 	fmt.Fprintf(ui.stdout, "\n%s%s ", prompt, PromptColor(">"))
-
-	rd := bufio.NewReader(ui.stdin)
-	line, err := rd.ReadString('\n')
-	if err == nil {
-		return strings.TrimSpace(line)
+	if ui.scanner.Scan() {
+		w := ui.scanner.Text()
+		return strings.TrimSpace(w)
 	}
 	return ""
 }

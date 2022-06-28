@@ -1,0 +1,171 @@
+# code.cloudfoundry.org/bytefmt v0.0.0-20211005130812-5bb3c17173e5
+## explicit; go 1.16
+code.cloudfoundry.org/bytefmt
+# code.cloudfoundry.org/cli v7.1.0+incompatible
+## explicit
+code.cloudfoundry.org/cli/actor/actionerror
+code.cloudfoundry.org/cli/api/cloudcontroller/ccerror
+code.cloudfoundry.org/cli/api/cloudcontroller/ccv2/constant
+code.cloudfoundry.org/cli/api/cloudcontroller/ccv3/constant
+code.cloudfoundry.org/cli/api/plugin/pluginerror
+code.cloudfoundry.org/cli/api/uaa
+code.cloudfoundry.org/cli/api/uaa/constant
+code.cloudfoundry.org/cli/api/uaa/internal
+code.cloudfoundry.org/cli/cf
+code.cloudfoundry.org/cli/cf/configuration
+code.cloudfoundry.org/cli/cf/configuration/coreconfig
+code.cloudfoundry.org/cli/cf/formatters
+code.cloudfoundry.org/cli/cf/i18n
+code.cloudfoundry.org/cli/cf/models
+code.cloudfoundry.org/cli/cf/terminal
+code.cloudfoundry.org/cli/cf/trace
+code.cloudfoundry.org/cli/command/translatableerror
+code.cloudfoundry.org/cli/i18n/resources
+code.cloudfoundry.org/cli/plugin
+code.cloudfoundry.org/cli/plugin/models
+code.cloudfoundry.org/cli/types
+code.cloudfoundry.org/cli/util
+code.cloudfoundry.org/cli/util/clissh/ssherror
+code.cloudfoundry.org/cli/util/configv3
+code.cloudfoundry.org/cli/util/download
+code.cloudfoundry.org/cli/util/manifest
+code.cloudfoundry.org/cli/util/ui
+code.cloudfoundry.org/cli/util/v6manifestparser
+code.cloudfoundry.org/cli/version
+# code.cloudfoundry.org/cli-plugin-repo v0.0.0-20220531210706-6a14ada5b46e
+## explicit; go 1.12
+# code.cloudfoundry.org/go-log-cache v1.0.0
+## explicit
+# code.cloudfoundry.org/go-loggregator v7.4.0+incompatible
+## explicit
+# code.cloudfoundry.org/gofileutils v0.0.0-20170111115228-4d0c80011a0f
+## explicit
+# code.cloudfoundry.org/jsonry v1.1.3
+## explicit; go 1.13
+# code.cloudfoundry.org/rfc5424 v0.0.0-20201103192249-000122071b78
+## explicit
+# code.cloudfoundry.org/tlsconfig v0.0.0-20220621140725-0e6fbd869921
+## explicit; go 1.17
+code.cloudfoundry.org/tlsconfig
+# code.cloudfoundry.org/ykk v0.0.0-20170424192843-e4df4ce2fd4d
+## explicit
+# github.com/SermoDigital/jose v0.9.1
+## explicit
+github.com/SermoDigital/jose
+github.com/SermoDigital/jose/crypto
+github.com/SermoDigital/jose/jws
+github.com/SermoDigital/jose/jwt
+# github.com/blang/semver v3.5.1+incompatible
+## explicit
+github.com/blang/semver
+# github.com/bmatcuk/doublestar v1.3.4
+## explicit; go 1.12
+github.com/bmatcuk/doublestar
+# github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f
+## explicit
+# github.com/charlievieth/fs v0.0.2
+## explicit; go 1.15
+github.com/charlievieth/fs
+# github.com/cloudfoundry/bosh-cli v6.4.1+incompatible
+## explicit
+github.com/cloudfoundry/bosh-cli/director/template
+# github.com/cloudfoundry/bosh-utils v0.0.320
+## explicit; go 1.18
+github.com/cloudfoundry/bosh-utils/errors
+github.com/cloudfoundry/bosh-utils/logger
+github.com/cloudfoundry/bosh-utils/system
+# github.com/contraband/autopilot v0.0.0-20181203203448-1dc8b7d7d163
+## explicit
+github.com/contraband/autopilot/rewind
+# github.com/cppforlife/go-patch v0.2.0
+## explicit
+github.com/cppforlife/go-patch/patch
+# github.com/creack/pty v1.1.11
+## explicit; go 1.13
+# github.com/cyphar/filepath-securejoin v0.2.3
+## explicit; go 1.13
+# github.com/fatih/color v1.13.0
+## explicit; go 1.13
+github.com/fatih/color
+# github.com/google/go-querystring v1.1.0
+## explicit; go 1.10
+# github.com/grpc-ecosystem/grpc-gateway v1.16.0
+## explicit; go 1.14
+# github.com/jessevdk/go-flags v1.5.0
+## explicit; go 1.15
+github.com/jessevdk/go-flags
+# github.com/kr/pty v1.1.8
+## explicit; go 1.12
+# github.com/kr/text v0.2.0
+## explicit
+# github.com/lunixbochs/vtclean v1.0.0
+## explicit
+github.com/lunixbochs/vtclean
+# github.com/mattn/go-colorable v0.1.12
+## explicit; go 1.13
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.14
+## explicit; go 1.12
+github.com/mattn/go-isatty
+# github.com/mattn/go-runewidth v0.0.13
+## explicit; go 1.9
+github.com/mattn/go-runewidth
+# github.com/moby/moby v20.10.17+incompatible
+## explicit
+# github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6
+## explicit; go 1.13
+# github.com/onsi/ginkgo v1.16.5
+## explicit; go 1.16
+# github.com/onsi/gomega v1.19.0
+## explicit; go 1.18
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/rivo/uniseg v0.2.0
+## explicit; go 1.12
+github.com/rivo/uniseg
+# github.com/rogpeppe/go-internal v1.6.1
+## explicit; go 1.11
+# github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06
+## explicit; go 1.13
+# github.com/sirupsen/logrus v1.8.1
+## explicit; go 1.13
+github.com/sirupsen/logrus
+# github.com/tedsuo/rata v1.0.0
+## explicit
+# github.com/vito/go-interact v1.0.0
+## explicit; go 1.12
+github.com/vito/go-interact/interact
+github.com/vito/go-interact/interact/terminal
+# golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d
+## explicit; go 1.17
+golang.org/x/crypto/ssh/terminal
+# golang.org/x/sys v0.0.0-20220624220833-87e55d714810
+## explicit; go 1.17
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/plan9
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1
+## explicit; go 1.11
+golang.org/x/term
+# golang.org/x/text v0.3.7
+## explicit; go 1.17
+golang.org/x/text/internal/language
+golang.org/x/text/internal/language/compact
+golang.org/x/text/internal/tag
+golang.org/x/text/language
+# google.golang.org/genproto v0.0.0-20220627200112-0a929928cb33
+## explicit; go 1.15
+# google.golang.org/grpc v1.47.0
+## explicit; go 1.14
+# google.golang.org/protobuf v1.28.0
+## explicit; go 1.11
+# gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
+## explicit
+# gopkg.in/cheggaaa/pb.v1 v1.0.28
+## explicit
+gopkg.in/cheggaaa/pb.v1
+# gopkg.in/yaml.v2 v2.4.0
+## explicit; go 1.15
+gopkg.in/yaml.v2

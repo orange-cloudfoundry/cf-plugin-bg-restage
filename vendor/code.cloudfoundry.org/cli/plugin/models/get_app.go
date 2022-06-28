@@ -7,7 +7,6 @@ type GetAppModel struct {
 	Name                 string
 	BuildpackUrl         string
 	Command              string
-	Diego                bool
 	DetectedStartCommand string
 	DiskQuota            int64 // in Megabytes
 	EnvironmentVars      map[string]interface{}
@@ -20,7 +19,6 @@ type GetAppModel struct {
 	PackageUpdatedAt     *time.Time
 	PackageState         string
 	StagingFailedReason  string
-	AppPorts             []int
 	Stack                *GetApp_Stack
 	Instances            []GetApp_AppInstanceFields
 	Routes               []GetApp_RouteSummary

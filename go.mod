@@ -1,6 +1,8 @@
 module github.com/orange-cloudfoundry/cf-plugin-bg-restage
 
-go 1.18
+go 1.19
+
+exclude github.com/vito/go-interact v1.0.1
 
 require (
 	code.cloudfoundry.org/cli v7.1.0+incompatible
@@ -22,9 +24,9 @@ require (
 	github.com/blang/semver v3.5.1+incompatible // indirect
 	github.com/bmatcuk/doublestar v1.3.4 // indirect
 	github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f // indirect
-	github.com/charlievieth/fs v0.0.2 // indirect
+	github.com/charlievieth/fs v0.0.3 // indirect
 	github.com/cloudfoundry/bosh-cli v6.4.1+incompatible // indirect
-	github.com/cloudfoundry/bosh-utils v0.0.320 // indirect
+	github.com/cloudfoundry/bosh-utils v0.0.336 // indirect
 	github.com/cppforlife/go-patch v0.2.0 // indirect
 	github.com/creack/pty v1.1.11 // indirect
 	github.com/cyphar/filepath-securejoin v0.2.3 // indirect
@@ -35,26 +37,23 @@ require (
 	github.com/kr/pty v1.1.8 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/lunixbochs/vtclean v1.0.0 // indirect
-	github.com/mattn/go-colorable v0.1.12 // indirect
-	github.com/mattn/go-isatty v0.0.14 // indirect
-	github.com/mattn/go-runewidth v0.0.13 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.16 // indirect
+	github.com/mattn/go-runewidth v0.0.14 // indirect
 	github.com/moby/moby v20.10.17+incompatible // indirect
 	github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6 // indirect
-	github.com/onsi/ginkgo v1.16.5 // indirect
-	github.com/onsi/gomega v1.19.0 // indirect
-	github.com/rivo/uniseg v0.2.0 // indirect
+	github.com/rivo/uniseg v0.4.2 // indirect
 	github.com/rogpeppe/go-internal v1.6.1 // indirect
 	github.com/sabhiram/go-gitignore v0.0.0-20210923224102-525f6e181f06 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
+	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/tedsuo/rata v1.0.0 // indirect
 	github.com/vito/go-interact v1.0.0 // indirect
-	golang.org/x/crypto v0.0.0-20220622213112-05595931fe9d // indirect
-	golang.org/x/sys v0.0.0-20220624220833-87e55d714810 // indirect
-	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
+	golang.org/x/crypto v0.0.0-20220926161630-eccd6366d1be // indirect
+	golang.org/x/sys v0.0.0-20220926163933-8cfa568d3c25 // indirect
+	golang.org/x/term v0.0.0-20220919170432-7a66f970e087 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/genproto v0.0.0-20220627200112-0a929928cb33 // indirect
 	google.golang.org/grpc v1.47.0 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect

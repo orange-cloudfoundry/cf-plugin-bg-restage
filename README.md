@@ -36,7 +36,7 @@ This is the process for `bg-restage`:
 2. The old application is renamed to `<APP-NAME>-venerable`. It keeps its old route
    mappings and this change is invisible to users.
 
-3. The new application is pushed to `<APP-NAME>`, this push will normally failed because we just want to create an app
+3. The new application is pushed to `<APP-NAME>`, this push will normally fail because we just want to create an app
    but not push real code (we do that because there is no easy way to create an app without pushing code as a cli plugin). 
    **Note**: you will not see any failures and if it's not failed the app will not be started.
 

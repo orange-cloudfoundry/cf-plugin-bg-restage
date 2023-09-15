@@ -1,6 +1,6 @@
 module github.com/orange-cloudfoundry/cf-plugin-bg-restage
 
-go 1.19
+go 1.21
 
 exclude github.com/vito/go-interact v1.0.1
 

@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -25,11 +24,11 @@ type ApplicationRepo struct {
 }
 
 func NewApplicationRepo(conn plugin.CliConnection) (*ApplicationRepo, error) {
-	dir, err := ioutil.TempDir("", "bg-restage-plugin")
+	dir, err := os.MkdirTemp("", "bg-restage-plugin")
 	if err != nil {
 		return nil, errors.Wrap(err, "creating temporary directory")
 	}
-	err = ioutil.WriteFile(filepath.Join(dir, ".cfignore"), ([]byte)(dropletFileName+"\n"), 0600)
+	err = os.WriteFile(filepath.Join(dir, ".cfignore"), ([]byte)(dropletFileName+"\n"), 0600)
 	if err != nil {
 		return nil, errors.Wrap(err, "creating .cfignore")
 	}

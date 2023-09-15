@@ -1,9 +1,7 @@
 project_name: cf-plugin-bg-restage
 
 builds:
-  -
-    &template
-    id: binary
+  - id: binary
     dir: .
     binary: cf-plugin-bg-restage
     env:

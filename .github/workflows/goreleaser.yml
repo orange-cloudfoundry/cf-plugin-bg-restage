@@ -2,7 +2,7 @@ name: goreleaser
 
 on:
   push:
-    # not not consider simplec commit
+    # do not consider simple commit
     branches:
       - '!*'
     # consider only release and pre-release tags
@@ -23,7 +23,7 @@ jobs:
       - name: set up go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.19
+          go-version: 1.21
 
       - name: cache go modules
         uses: actions/cache@v1
@@ -37,7 +37,7 @@ jobs:
         run: |
           go mod vendor
           if [ ! -z "$(git status --porcelain)" ]; then
-            echo "::error::vendor directory if not synched with go.mod, please run go mod vendor"
+            echo "::error::vendor directory if not synced with go.mod, please run go mod vendor"
             exit 1
           fi
 

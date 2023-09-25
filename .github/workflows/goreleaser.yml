@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
 
       - name: set up go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: 1.21
 

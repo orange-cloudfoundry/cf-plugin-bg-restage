@@ -82,7 +82,7 @@ github.com/contraband/autopilot/rewind
 github.com/cppforlife/go-patch/patch
 # github.com/creack/pty v1.1.11
 ## explicit; go 1.13
-# github.com/cyphar/filepath-securejoin v0.2.3
+# github.com/cyphar/filepath-securejoin v0.2.4
 ## explicit; go 1.13
 # github.com/fatih/color v1.17.0
 ## explicit; go 1.17

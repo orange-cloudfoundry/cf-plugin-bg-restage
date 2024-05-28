@@ -82,13 +82,13 @@ github.com/contraband/autopilot/rewind
 github.com/cppforlife/go-patch/patch
 # github.com/creack/pty v1.1.11
 ## explicit; go 1.13
-# github.com/cyphar/filepath-securejoin v0.2.4
+# github.com/cyphar/filepath-securejoin v0.2.5
 ## explicit; go 1.13
 # github.com/fatih/color v1.17.0
 ## explicit; go 1.17
 github.com/fatih/color
-# github.com/golang/protobuf v1.5.3
-## explicit; go 1.9
+# github.com/golang/protobuf v1.5.4
+## explicit; go 1.17
 # github.com/google/go-querystring v1.1.0
 ## explicit; go 1.10
 # github.com/grpc-ecosystem/grpc-gateway v1.16.0
@@ -112,10 +112,6 @@ github.com/mattn/go-isatty
 # github.com/mattn/go-runewidth v0.0.15
 ## explicit; go 1.9
 github.com/mattn/go-runewidth
-# github.com/moby/moby v20.10.17+incompatible
-## explicit
-# github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6
-## explicit; go 1.13
 # github.com/onsi/ginkgo v1.15.0
 ## explicit; go 1.13
 # github.com/pkg/errors v0.9.1
@@ -156,8 +152,8 @@ golang.org/x/text/internal/tag
 golang.org/x/text/language
 # google.golang.org/genproto v0.0.0-20230410155749-daa745c078e1
 ## explicit; go 1.19
-# google.golang.org/grpc v1.56.3
-## explicit; go 1.17
+# google.golang.org/grpc v1.64.0
+## explicit; go 1.19
 # gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
 ## explicit
 # gopkg.in/cheggaaa/pb.v1 v1.0.28
